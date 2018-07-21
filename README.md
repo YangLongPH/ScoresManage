@@ -18,7 +18,7 @@ Có các chức năng như tra cứu điểm thi theo các thông tin, up điể
 - Jquery 3.3.1
 
 ## Design
-- Thiết kế tổng quan.
+- Thiết kế tổng quan.  
     https://docs.google.com/spreadsheets/d/1l8sLmUi6oPVm0-hgVi3363nVLD0x-Ef5qUZRkeG8uik/edit?usp=sharing
 - Front-end image
     ...
