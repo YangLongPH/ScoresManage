@@ -20,9 +20,9 @@ Có các chức năng như tra cứu điểm thi theo các thông tin, up điể
 ## Design
 - Thiết kế tổng quan.  
     https://docs.google.com/spreadsheets/d/1l8sLmUi6oPVm0-hgVi3363nVLD0x-Ef5qUZRkeG8uik/edit?usp=sharing
-- Front-end image
+- Front-end image  
     ...
-- Input
+- Input  
     ...
 ## Nhóm phát triển
 
@@ -35,26 +35,26 @@ Danh sách thành viên :
 | 3     | Phạm Văn Oánh     | BACK-END  |-------------  |
 
 ## Hướng dẫn
-- Clone về repo của thư mục gốc apache htdocs của Xampp hoặc www của Appserv.
-    git clone https://github.com/YangLongPH/ScoresManage.git
-    Với SSH key:
-    git clone git@github.com:YangLongPH/ScoresManage.git
-- Chạy lệnh sau để build hệ thống
-    Windows:
-        composer install
-    Linux:
-        sudo composer install
-- Tạo file .env từ .env.example
-    rename .env.example -> .env. = .env file
-- Tạo Database trên http://localhost/phpmyadmin
-    database name: scoresmanage
-- Tạo table Database
-    php artisan migrate
-- Tạo seed Database
-    php artisan db:seed
+- Clone về repo của thư mục gốc apache htdocs của Xampp hoặc www của Appserv.  
+    git clone https://github.com/YangLongPH/ScoresManage.git  
+    Với SSH key:  
+    git clone git@github.com:YangLongPH/ScoresManage.git  
+- Chạy lệnh sau để build hệ thống  
+    Windows:  
+        composer install  
+    Linux:  
+        sudo composer install  
+- Tạo file .env từ .env.example  
+    rename .env.example -> .env. = .env file  
+- Tạo Database trên http://localhost/phpmyadmin  
+    database name: scoresmanage 
+- Tạo table Database  
+    php artisan migrate  
+- Tạo seed Database  
+    php artisan db:seed  
 ## Fix error
-- RuntimeException: The only supported ciphers are AES-128-CBC and AES-256-CBC with the correct key lengths.
-    php artisan key:generate
+- RuntimeException: The only supported ciphers are AES-128-CBC and AES-256-CBC with the correct key lengths.  
+    php artisan key:generate  
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
