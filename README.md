@@ -7,45 +7,54 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
 </p>
 
-## About Laravel
+## Thông tin
+ScoresManage là dự án web quản lý hệ thống tra cứu điểm cho Đại học công nghệ-ĐHQGHN.
+Có các chức năng như tra cứu điểm thi theo các thông tin, up điểm thi lên hệ thống, quản lý thông tin về trường, lớp, khóa học, sinh viên...
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as:
+## Công nghệ
+- Laravel Framework 5.4.36
+- PHP 5.6.28
+- Bootstrap 4.0
+- Jquery 3.3.1
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Design
+- Thiết kế tổng quan.
+    https://docs.google.com/spreadsheets/d/1l8sLmUi6oPVm0-hgVi3363nVLD0x-Ef5qUZRkeG8uik/edit?usp=sharing
+- Front-end image
+    ...
+- Input
+    ...
+## Nhóm phát triển
 
-Laravel is accessible, yet powerful, providing tools needed for large, robust applications. A superb combination of simplicity, elegance, and innovation give you tools you need to build any application with which you are tasked.
+Danh sách thành viên :
 
-## Learning Laravel
+| stt   |    thành viên     | vai trò   | ghi chú       |
+|:-----:|:----------------: |---------  |-------------  |
+| 1     | Đặng Danh Phương  | BACK-END  |-------------  |
+| 2     | Lê Hồng Phúc      | FRONT-END |-------------  |
+| 3     | Phạm Văn Oánh     | BACK-END  |-------------  |
 
-Laravel has the most extensive and thorough documentation and video tutorial library of any modern web application framework. The [Laravel documentation](https://laravel.com/docs) is thorough, complete, and makes it a breeze to get started learning the framework.
-
-If you're not in the mood to read, [Laracasts](https://laracasts.com) contains over 900 video tutorials on a range of topics including Laravel, modern PHP, unit testing, JavaScript, and more. Boost the skill level of yourself and your entire team by digging into our comprehensive video library.
-
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for helping fund on-going Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](http://patreon.com/taylorotwell):
-
-- **[Vehikl](http://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[British Software Development](https://www.britishsoftware.co)**
-- **[Styde](https://styde.net)**
-- [Fragrantica](https://www.fragrantica.com)
-- [SOFTonSOFA](https://softonsofa.com/)
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](http://laravel.com/docs/contributions).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
-
+## Hướng dẫn
+- Clone về repo của thư mục gốc apache htdocs của Xampp hoặc www của Appserv.
+    git clone https://github.com/YangLongPH/ScoresManage.git
+    Với SSH key:
+    git clone git@github.com:YangLongPH/ScoresManage.git
+- Chạy lệnh sau để build hệ thống
+    Windows:
+        composer install
+    Linux:
+        sudo composer install
+- Tạo file .env từ .env.example
+    rename .env.example -> .env. = .env file
+- Tạo Database trên http://localhost/phpmyadmin
+    database name: scoresmanage
+- Tạo table Database
+    php artisan migrate
+- Tạo seed Database
+    php artisan db:seed
+## Fix error
+- RuntimeException: The only supported ciphers are AES-128-CBC and AES-256-CBC with the correct key lengths.
+    php artisan key:generate
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
