@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateTypeEducates extends Migration
+class CreateSemesters extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,11 @@ class CreateTypeEducates extends Migration
      */
     public function up()
     {
-        Schema::create('typeeducates', function (Blueprint $table) {
-            $table->bigIncrements('id_typeeducate');
+        Schema::create('semesters', function (Blueprint $table) {
+            $table->engine = 'InnoDB';
+            $table->Increments('id_semester');
             $table->string('name');
             $table->string('note');
-            
 
             $table->rememberToken();
             $table->timestamps();
@@ -31,6 +31,6 @@ class CreateTypeEducates extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('typeeducates');
+        Schema::dropIfExists('semesters');
     }
 }

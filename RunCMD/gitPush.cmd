@@ -1,3 +1,3 @@
 git add *
-git commit -m "Create database use migrate"
+git commit -m "Final Database"
 git push origin master

@@ -46,6 +46,10 @@ Danh sách thành viên :
         sudo composer install  
 - Tạo file .env từ .env.example  
     rename .env.example -> .env. = .env file  
+- Chỉnh sửa các mục trong .env file
+    DB_DATABASE=scoresmanage  
+    DB_USERNAME=root  
+    DB_PASSWORD=  
 - Tạo Database trên http://localhost/phpmyadmin  
     database name: scoresmanage 
 - Tạo table Database  
@@ -53,6 +57,8 @@ Danh sách thành viên :
 - Tạo seed Database  
     php artisan db:seed  
 ## Fix error
+- Enable openssl extension:
+    Bỏ dấu ; đầu dòng ";extension=php_openssl.dll" trong thư mục php.ini của thư mục /php5 hoặc /php7 của bộ cài.
 - RuntimeException: The only supported ciphers are AES-128-CBC and AES-256-CBC with the correct key lengths.  
     php artisan key:generate  
 ## License

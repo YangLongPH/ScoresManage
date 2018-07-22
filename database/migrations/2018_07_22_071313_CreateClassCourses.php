@@ -14,14 +14,24 @@ class CreateClassCourses extends Migration
     public function up()
     {
         Schema::create('classcourses', function (Blueprint $table) {
+            $table->engine = 'InnoDB';
             $table->bigIncrements('id_classcourse');
             $table->string('codecourse');
             $table->string('name');
             $table->string('note');
-            $table->integer('id_typeeducate');
+            
+            $table->integer('id_typeeducate')->unsigned();
 
             $table->rememberToken();
             $table->timestamps();
+        });
+
+        Schema::table('classcourses',function(Blueprint $table){
+            $table->foreign('id_typeeducate')
+            ->references('id_typeeducate')
+            ->on('typeeducates')
+            ->onDelete('cascade')
+            ->onUpdate('cascade');
         });
     }
 

@@ -14,7 +14,10 @@ class CreateStudents extends Migration
     public function up()
     {
         Schema::create('students', function (Blueprint $table) {
-            $table->integer('mssv')->primary();
+            $table->engine = 'InnoDB';
+            $table->Increments('id_student');
+            $table->integer('mssv');
+
             $table->string('fullname');
             $table->string('address');
             $table->string('birthday');
@@ -22,11 +25,27 @@ class CreateStudents extends Migration
             $table->string('email');
             $table->string('hobby');
             $table->string('major');
-            $table->string('class');
-            $table->integer('id_typeeducate');
 
+            $table->bigInteger('id_classcourse')->unsigned();
+            
+            $table->integer('id_typeeducate')->unsigned();
+            
             $table->rememberToken();
             $table->timestamps();
+        });
+
+        Schema::table('students',function(Blueprint $table){
+            $table->foreign('id_classcourse')
+            ->references('id_classcourse')
+            ->on('classcourses')
+            ->onDelete('cascade')
+            ->onUpdate('cascade');
+
+            $table->foreign('id_typeeducate')
+            ->references('id_typeeducate')
+            ->on('typeeducates')
+            ->onDelete('cascade')
+            ->onUpdate('cascade');
         });
     }
 

@@ -14,7 +14,8 @@ class CreateLecturers extends Migration
     public function up()
     {
         Schema::create('lecturers', function (Blueprint $table) {
-            $table->integer('id_lecturer')->primary();
+            $table->engine = 'InnoDB';
+            $table->Increments('id_lecturer');
             $table->string('fullname');
             $table->string('office');
             $table->string('address');

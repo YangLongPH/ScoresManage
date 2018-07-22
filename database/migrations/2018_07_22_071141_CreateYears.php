@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateRoles extends Migration
+class CreateYears extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,15 @@ class CreateRoles extends Migration
      */
     public function up()
     {
-        Schema::create('roles', function (Blueprint $table) {
-            $table->bigIncrements('id_role')->unsigned();
+        Schema::create('years', function (Blueprint $table) {
+            $table->engine = 'InnoDB';
+            $table->Increments('id_year');
             $table->string('name');
             $table->string('note');
+
+
+            $table->rememberToken();
+            $table->timestamps();
         });
     }
 
@@ -27,6 +32,6 @@ class CreateRoles extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('roles');
+        Schema::dropIfExists('years');
     }
 }
