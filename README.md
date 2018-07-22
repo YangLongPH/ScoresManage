@@ -40,9 +40,9 @@ Danh sách thành viên :
     Với SSH key:  
     git clone git@github.com:YangLongPH/ScoresManage.git  
 - Chạy lệnh sau để build hệ thống  
-    Windows:  
+    +Windows:  
         composer install  
-    Linux:  
+    +Linux:  
         sudo composer install  
 - Tạo file .env từ .env.example  
     rename .env.example -> .env. = .env file  
