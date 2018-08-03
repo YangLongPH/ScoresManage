@@ -21,33 +21,33 @@ class CreateUsers extends Migration
 
             $table->integer('id_role')->unsigned();
 
-            $table->integer('id_student')->unsigned();
+            $table->integer('id_student')->unsigned()->nullable();;
 
-            $table->integer('id_lecturer')->unsigned();
+            $table->integer('id_lecturer')->unsigned()->nullable();;
             
             $table->rememberToken();
             $table->timestamps();
         });
 
-        Schema::table('users',function(Blueprint $table){
-            $table->foreign('id_role')
-            ->references('id_role')
-            ->on('roles')
-            ->onDelete('cascade')
-            ->onUpdate('cascade');
+        // Schema::table('users',function(Blueprint $table){
+        //     $table->foreign('id_role')
+        //     ->references('id_role')
+        //     ->on('roles')
+        //     ->onDelete('cascade')
+        //     ->onUpdate('cascade');
 
-            $table->foreign('id_student')
-            ->references('id_student')
-            ->on('students')
-            ->onDelete('cascade')
-            ->onUpdate('cascade');
+        //     $table->foreign('id_student')
+        //     ->references('id_student')
+        //     ->on('students')
+        //     ->onDelete('cascade')
+        //     ->onUpdate('cascade');
 
-            $table->foreign('id_lecturer')
-            ->references('id_lecturer')
-            ->on('lecturers')
-            ->onDelete('cascade')
-            ->onUpdate('cascade');
-        });
+        //     $table->foreign('id_lecturer')
+        //     ->references('id_lecturer')
+        //     ->on('lecturers')
+        //     ->onDelete('cascade')
+        //     ->onUpdate('cascade');
+        // });
     }
 
     /**

@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use App\Models\TypeEducate;
 
 class EducatesSeeder extends Seeder
 {
@@ -11,6 +12,14 @@ class EducatesSeeder extends Seeder
      */
     public function run()
     {
-        //
+        TypeEducate::create([
+            'name'=>'Đại học',
+            'note'=>'Hệ đào tạo cho sinh viên'
+        ]);
+
+        TypeEducate::create([
+            'name'=>'Sau đại học',
+            'note'=>'Hệ đào tạo cho nghiên cứu sinh, tiến sĩ'
+        ]);
     }
 }

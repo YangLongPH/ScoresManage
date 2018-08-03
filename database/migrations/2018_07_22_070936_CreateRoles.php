@@ -18,6 +18,9 @@ class CreateRoles extends Migration
             $table->Increments('id_role');
             $table->string('name');
             $table->string('note');
+
+            $table->rememberToken();
+            $table->timestamps();
         });
     }
 

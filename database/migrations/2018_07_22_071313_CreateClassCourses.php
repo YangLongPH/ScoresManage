@@ -26,13 +26,13 @@ class CreateClassCourses extends Migration
             $table->timestamps();
         });
 
-        Schema::table('classcourses',function(Blueprint $table){
-            $table->foreign('id_typeeducate')
-            ->references('id_typeeducate')
-            ->on('typeeducates')
-            ->onDelete('cascade')
-            ->onUpdate('cascade');
-        });
+        // Schema::table('classcourses',function(Blueprint $table){
+        //     $table->foreign('id_typeeducate')
+        //     ->references('id_typeeducate')
+        //     ->on('typeeducates')
+        //     ->onDelete('cascade')
+        //     ->onUpdate('cascade');
+        // });
     }
 
     /**

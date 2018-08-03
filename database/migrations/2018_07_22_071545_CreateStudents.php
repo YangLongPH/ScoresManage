@@ -19,11 +19,11 @@ class CreateStudents extends Migration
             $table->integer('mssv');
 
             $table->string('fullname');
-            $table->string('address');
-            $table->string('birthday');
-            $table->string('phonenumber');
+            // $table->string('address');
+            // $table->string('birthday');
+            // $table->string('phonenumber');
             $table->string('email');
-            $table->string('hobby');
+            // $table->string('hobby');
             $table->string('major');
 
             $table->bigInteger('id_classcourse')->unsigned();
@@ -34,19 +34,19 @@ class CreateStudents extends Migration
             $table->timestamps();
         });
 
-        Schema::table('students',function(Blueprint $table){
-            $table->foreign('id_classcourse')
-            ->references('id_classcourse')
-            ->on('classcourses')
-            ->onDelete('cascade')
-            ->onUpdate('cascade');
+        // Schema::table('students',function(Blueprint $table){
+        //     $table->foreign('id_classcourse')
+        //     ->references('id_classcourse')
+        //     ->on('classcourses')
+        //     ->onDelete('cascade')
+        //     ->onUpdate('cascade');
 
-            $table->foreign('id_typeeducate')
-            ->references('id_typeeducate')
-            ->on('typeeducates')
-            ->onDelete('cascade')
-            ->onUpdate('cascade');
-        });
+        //     $table->foreign('id_typeeducate')
+        //     ->references('id_typeeducate')
+        //     ->on('typeeducates')
+        //     ->onDelete('cascade')
+        //     ->onUpdate('cascade');
+        // });
     }
 
     /**

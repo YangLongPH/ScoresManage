@@ -16,31 +16,49 @@ class CreateScores extends Migration
         Schema::create('scores', function (Blueprint $table) {
             $table->engine = 'InnoDB';
             $table->bigIncrements('id_scores');
-            $table->integer('scores40');
-            $table->integer('scores60');
-            $table->integer('scores100');
+            $table->string('link');
+            // $table->integer('scores40');
+            // $table->integer('scores60');
+            // $table->integer('scores100');
 
             $table->bigInteger('id_classsubject')->unsigned();
+            
+            $table->integer('id_semester')->unsigned();
 
-            $table->Integer('id_student')->unsigned();
+            $table->integer('id_year')->unsigned();
+
+            // $table->Integer('id_student')->unsigned();
 
             $table->rememberToken();
             $table->timestamps();
         });
 
-        Schema::table('scores',function(Blueprint $table){
-            $table->foreign('id_classsubject')
-            ->references('id_classsubject')
-            ->on('classsubjects')
-            ->onDelete('cascade')
-            ->onUpdate('cascade');
+        // Schema::table('scores',function(Blueprint $table){
+        //     $table->foreign('id_classsubject')
+        //     ->references('id_classsubject')
+        //     ->on('classsubjects')
+        //     ->onDelete('cascade')
+        //     ->onUpdate('cascade');
 
-            $table->foreign('id_student')
-            ->references('id_student')
-            ->on('students')
-            ->onDelete('cascade')
-            ->onUpdate('cascade');
-        });
+            
+        //     $table->foreign('id_semester')
+        //     ->references('id_semester')
+        //     ->on('semesters')
+        //     ->onDelete('cascade')
+        //     ->onUpdate('cascade');
+
+        //     $table->foreign('id_year')
+        //     ->references('id_year')
+        //     ->on('years')
+        //     ->onDelete('cascade')
+        //     ->onUpdate('cascade');
+
+        //     $table->foreign('id_student')
+        //     ->references('id_student')
+        //     ->on('students')
+        //     ->onDelete('cascade')
+        //     ->onUpdate('cascade');
+        // });
     }
 
     /**

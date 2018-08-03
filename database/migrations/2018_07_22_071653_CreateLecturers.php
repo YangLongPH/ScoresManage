@@ -18,11 +18,11 @@ class CreateLecturers extends Migration
             $table->Increments('id_lecturer');
             $table->string('fullname');
             $table->string('office');
-            $table->string('address');
-            $table->string('birthday');
-            $table->string('phonenumber');
-            $table->string('email');
-            $table->string('hobby');
+            // $table->string('address');
+            // $table->string('birthday');
+            // $table->string('phonenumber');
+            // $table->string('email');
+            // $table->string('hobby');
 
             $table->rememberToken();
             $table->timestamps();

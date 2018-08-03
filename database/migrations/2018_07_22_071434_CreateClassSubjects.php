@@ -22,33 +22,17 @@ class CreateClassSubjects extends Migration
 
             $table->integer('id_typeeducate')->unsigned();
 
-            $table->integer('id_semester')->unsigned();
-
-            $table->integer('id_year')->unsigned();
-
             $table->rememberToken();
             $table->timestamps();
         });
 
-        Schema::table('classsubjects',function(Blueprint $table){
-            $table->foreign('id_typeeducate')
-            ->references('id_typeeducate')
-            ->on('typeeducates')
-            ->onDelete('cascade')
-            ->onUpdate('cascade');
-
-            $table->foreign('id_semester')
-            ->references('id_semester')
-            ->on('semesters')
-            ->onDelete('cascade')
-            ->onUpdate('cascade');
-
-            $table->foreign('id_year')
-            ->references('id_year')
-            ->on('years')
-            ->onDelete('cascade')
-            ->onUpdate('cascade');
-        });
+        // Schema::table('classsubjects',function(Blueprint $table){
+        //     $table->foreign('id_typeeducate')
+        //     ->references('id_typeeducate')
+        //     ->on('typeeducates')
+        //     ->onDelete('cascade')
+        //     ->onUpdate('cascade');
+        // });
     }
 
     /**

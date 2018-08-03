@@ -16,6 +16,7 @@ class CreateSemesters extends Migration
         Schema::create('semesters', function (Blueprint $table) {
             $table->engine = 'InnoDB';
             $table->Increments('id_semester');
+            $table->string('codesemester');
             $table->string('name');
             $table->string('note');
 

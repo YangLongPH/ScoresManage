@@ -1,3 +1,3 @@
-git add *
-git commit -m "Make login form"
+git add .
+git commit -m "Final database"
 git push origin phuong
