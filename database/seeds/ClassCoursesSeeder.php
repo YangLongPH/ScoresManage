@@ -16,14 +16,14 @@ class ClassCoursesSeeder extends Seeder
             'codecourse'=>'K58CC',
             'name'=>'QH-2013-I/CQ-C-C',
             'note'=>'Khóa 58 khoa công nghệ thông tin',
-            'id_typeeducate'=>0            
+            'id_typeeducate'=>1            
         ]);
 
         ClassCourse::create([
             'codecourse'=>'K59M',
             'name'=>'QH-2014-I/CQ-M',
             'note'=>'Khóa 58 khoa cơ điện tử',
-            'id_typeeducate'=>0
+            'id_typeeducate'=>1
         ]);
     }
 }

@@ -17,8 +17,8 @@ class StudentsSeeder extends Seeder
             'fullname'=>'Đặng Danh Phương',
             'email'=>'yanglong.ph@gmail.com',
             'major'=>'Công nghệ thông tin',
-            'id_classcourse'=>0,
-            'id_typeeducate'=>0
+            'id_classcourse'=>1,
+            'id_typeeducate'=>1
         ]);
 
         Student::create([
@@ -26,8 +26,8 @@ class StudentsSeeder extends Seeder
             'fullname'=>'Nguyên Quang Nhật',
             'email'=>'NhatNG.ph@gmail.com',
             'major'=>'Cơ điện tử',
-            'id_classcourse'=>1,
-            'id_typeeducate'=>0
+            'id_classcourse'=>2,
+            'id_typeeducate'=>1
         ]);
     }
 }

@@ -14,16 +14,16 @@ class ScoresSeeder extends Seeder
     {
         Score::create([
             'link'=>'score1',
-            'id_classsubject'=>0,
-            'id_semester'=>0,
-            'id_year'=>0
+            'id_classsubject'=>1,
+            'id_semester'=>1,
+            'id_year'=>1
         ]);
 
         Score::create([
             'link'=>'score2',
             'id_classsubject'=>1,
-            'id_semester'=>0,
-            'id_year'=>0
+            'id_semester'=>1,
+            'id_year'=>1
         ]);
     }
 }
